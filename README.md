@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Grepr-Take-Home
 Grepr Take home assesment
 =======

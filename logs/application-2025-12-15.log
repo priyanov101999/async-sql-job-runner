@@ -1,0 +1,51 @@
+INFO  [2025-12-16 02:10:32,014] org.eclipse.jetty.util.log: Logging initialized @474ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  [2025-12-16 02:10:32,039] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2025-12-16 02:10:32,039] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2025-12-16 02:10:32,154] io.dropwizard.server.ServerFactory: Starting GreprApplication
+================================================================================
+
+                              true
+
+================================================================================
+
+INFO  [2025-12-16 02:10:32,187] org.eclipse.jetty.setuid.SetUIDListener: Opened application@4eed2acf{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+INFO  [2025-12-16 02:10:32,187] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@36fc05ff{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+DEBUG [2025-12-16 02:10:32,187] io.dropwizard.lifecycle.setup.LifecycleEnvironment: managed objects = [io.dropwizard.lifecycle.ExecutorServiceManager@7efe7b87(TimeBoundHealthCheck-pool-%d)]
+INFO  [2025-12-16 02:10:32,188] org.eclipse.jetty.server.Server: jetty-9.4.53.v20231009; built: 2023-10-09T12:29:09.265Z; git: 27bde00a0b95a1d5bbee0eae7984f891d2d0f8c9; jvm 22+36-2370
+DEBUG [2025-12-16 02:10:32,325] io.dropwizard.jersey.DropwizardResourceConfig: resources = org.glassfish.jersey.server.model.Resource, org.glassfish.jersey.server.model.Resource, org.glassfish.jersey.server.model.Resource
+DEBUG [2025-12-16 02:10:32,325] io.dropwizard.jersey.DropwizardResourceConfig: providers = io.dropwizard.jersey.DropwizardResourceConfig.MetricRegistryBinder, io.dropwizard.jersey.optional.OptionalIntMessageBodyWriter, org.glassfish.jersey.servlet.WebComponent.WebComponentBinder, io.dropwizard.jersey.jackson.JacksonMessageBodyProvider, io.dropwizard.jersey.sessions.SessionFactoryProvider.Binder, org.example.resources.PingResource, org.example.resources.QueryResource, org.example.resources.RequestLogFilter, org.example.resources.AuthFilter, org.example.resources.DbPingResource, io.dropwizard.jersey.validation.FuzzyEnumParamConverterProvider, io.dropwizard.jersey.validation.HibernateValidationBinder, org.glassfish.jersey.server.validation.ValidationFeature, io.dropwizard.jersey.jackson.JacksonFeature, io.dropwizard.jersey.caching.CacheControlledResponseFeature, io.dropwizard.jersey.guava.OptionalParamBinder, io.dropwizard.jersey.optional.OptionalDoubleMessageBodyWriter, io.dropwizard.jersey.DropwizardResourceConfig$SpecificBindercc792dc3-9d6a-4a49-8bc3-5ff17efb23d5, io.dropwizard.jersey.DropwizardResourceConfig$SpecificBinderf9bf45bf-1a37-4ef5-b349-11cb525c1182, io.dropwizard.jersey.optional.OptionalLongMessageBodyWriter, null, io.dropwizard.jersey.DropwizardResourceConfig.ComponentLoggingListener, org.glassfish.jersey.server.validation.internal.ValidationBinder, org.example.resources.UnhandledExceptionMapper, io.dropwizard.setup.ExceptionMapperBinder, io.dropwizard.jersey.DropwizardResourceConfig$SpecificBindera2ef4315-656d-483c-95fc-94876d149532, org.glassfish.jersey.server.wadl.WadlFeature, io.dropwizard.validation.InjectValidatorFeature, com.codahale.metrics.jersey2.InstrumentedResourceMethodApplicationListener, io.dropwizard.jersey.guava.OptionalMessageBodyWriter, io.dropwizard.jersey.params.AbstractParamConverterProvider, io.dropwizard.jersey.optional.OptionalMessageBodyWriter
+INFO  [2025-12-16 02:10:32,330] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /dbping (org.example.resources.DbPingResource)
+    GET     /ping (org.example.resources.PingResource)
+    POST    /queries (org.example.resources.QueryResource)
+    GET     /queries/testdb (org.example.resources.QueryResource)
+    GET     /queries/{id} (org.example.resources.QueryResource)
+    POST    /queries/{id}/cancel (org.example.resources.QueryResource)
+    GET     /queries/{id}/results (org.example.resources.QueryResource)
+
+INFO  [2025-12-16 02:10:32,331] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@32120956{/,null,AVAILABLE}
+INFO  [2025-12-16 02:10:32,332] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2025-12-16 02:10:32,332] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+DEBUG [2025-12-16 02:10:32,332] io.dropwizard.setup.AdminEnvironment: health checks = [deadlocks]
+INFO  [2025-12-16 02:10:32,332] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@716185fe{/,null,AVAILABLE}
+INFO  [2025-12-16 02:10:32,337] org.eclipse.jetty.server.AbstractConnector: Started application@4eed2acf{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+INFO  [2025-12-16 02:10:32,337] org.eclipse.jetty.server.AbstractConnector: Started admin@36fc05ff{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+INFO  [2025-12-16 02:10:32,337] org.eclipse.jetty.server.Server: Started @798ms
+INFO  [2025-12-16 02:10:42,549] org.example.resources.RequestLogFilter: REQ POST queries
+INFO  [2025-12-16 02:13:06,405] org.example.resources.RequestLogFilter: REQ POST queries
+INFO  [2025-12-16 02:15:27,660] org.example.resources.RequestLogFilter: REQ POST queries
+INFO  [2025-12-16 02:18:51,461] org.example.resources.RequestLogFilter: REQ POST queries
+INFO  [2025-12-16 02:19:21,864] org.example.resources.RequestLogFilter: REQ POST queries
